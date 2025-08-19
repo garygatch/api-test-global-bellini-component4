@@ -1,0 +1,56 @@
+{
+  "type": "custom-component",
+  "name": "c",
+  "nodeName": null,
+  "description": null,
+  "children": [],
+  "variables": [
+    {
+      "name": "petstore2",
+      "type": "open-api",
+      "id": "open-api"
+    },
+    {
+      "name": "getPet",
+      "description": "",
+      "type": "method",
+      "body": "$ctrl.petstore2.findPetsByStatus({\n    status: 'sold'\n}).then(result => {\n    /* process the result */\n    console.log(result.data)\n})",
+      "invokeOnLoad": true,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [],
+      "watch": []
+    },
+    {
+      "name": "graphApi",
+      "type": "graphql-api",
+      "id": "graphql-api"
+    },
+    {
+      "name": "getGraph",
+      "description": "",
+      "type": "method",
+      "body": "$ctrl.graphApi.query.weather({\ncity: \"New York\" },\n    {\n        id: true,\n        cityName: true,\n        currentWeather: {\n            description: true,\n            humidity: true,\n            pressure: true,\n            status: true,\n            temp: true,\n            tempHigh: true,\n            tempLow: true,\n            windSpeed: true,\n        },\n    })\n    .then((result) => {\n        console.log(JSON.stringify(result, null, 2))\n    })",
+      "invokeOnLoad": true,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [],
+      "watch": []
+    }
+  ],
+  "bindings": [],
+  "modules": [],
+  "marketplaceId": null,
+  "formControl": null,
+  "transclude": null,
+  "styles": [],
+  "directories": null,
+  "externalScripts": [],
+  "externalStylesheets": [],
+  "localScripts": [],
+  "localStylesheets": []
+}

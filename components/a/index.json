@@ -1,0 +1,38 @@
+{
+  "type": "custom-component",
+  "name": "a",
+  "nodeName": null,
+  "description": null,
+  "children": [],
+  "variables": [
+    {
+      "name": "petstore2",
+      "type": "open-api",
+      "id": "open-api"
+    },
+    {
+      "name": "getPet",
+      "description": "",
+      "type": "method",
+      "body": "$ctrl.petstore2.findPetsByStatus({\n    status: 'sold'\n}).then(result => {\n    /* process the result */\n    console.log(result.data)\n})",
+      "invokeOnLoad": true,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [],
+      "watch": []
+    }
+  ],
+  "bindings": [],
+  "modules": [],
+  "marketplaceId": null,
+  "formControl": null,
+  "transclude": null,
+  "styles": [],
+  "directories": null,
+  "externalScripts": [],
+  "externalStylesheets": [],
+  "localScripts": [],
+  "localStylesheets": []
+}
